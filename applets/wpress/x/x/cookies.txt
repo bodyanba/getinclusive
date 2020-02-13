@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.getinclusive.com	TRUE	/	FALSE	1999999999	__cfduid	d4f26f8df0d6c7b2fc13cfd8a30f838571520481201
+wpress.getinclusive.com	TRUE	/	FALSE	1999999999	wfvt_2236654461	5aa0b3b56c78a
+

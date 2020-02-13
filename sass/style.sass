@@ -1,0 +1,254 @@
+@import fonts, colors
+
+*
+	outline: none !important
+
+html
+	height: 100%
+
+body
+	font-family: "ProximaNova", sans-serif
+	color: $color-black
+	background-color: $body-bg
+
+img
+	max-width: 100%
+	height: auto
+
+ul.list
+	padding-left: 0
+	list-style-type: none
+	li:before
+		content: '• '
+ul.p
+	padding-left: 0
+	list-style-type: none
+	margin-bottom: 0
+	li 
+		margin-bottom: 24px
+	&.fz-18 
+		li
+			margin-bottom: 2rem
+
+button
+	cursor: pointer
+
+p, ul.list
+	margin-bottom: 24px
+	&.fz-18 
+		margin-bottom: 2rem
+
+.btn
+	border-radius: 0
+	box-shadow: none !important
+.btn-info
+	background-color: $color-info !important
+	border-color: $color-info !important
+
+.form-row
+	margin-left: -3px
+	margin-right: -3px
+	> .col, > [class*="col-"]
+		padding-right: 3px
+		padding-left: 3px
+
+.tooltip
+	font-family: inherit
+	font-size: inherit
+	&.show
+		opacity: 1
+	.arrow
+		width: 0
+		height: 0
+	&.bs-tooltip-auto[x-placement^=bottom], &.bs-tooltip-bottom
+		padding: 24px 0
+		.arrow::before
+			width: 28px
+			height: 28px
+			margin: 11px -14px
+			transform: rotate(45deg)
+			background-color: #fff
+			border: 0
+			box-shadow: -2px -2px 3px 0 rgba(0, 0, 0, 0.08)
+.tooltip-inner
+	width: 285px
+	max-width: 100%
+	background-color: #fff
+	color: inherit
+	padding: 35px
+	border-radius: 0
+	box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.15)
+	.btn 
+		padding-top: 5px
+		padding-bottom: 5px
+
+.modal-header 
+	border-bottom: 0
+	.close
+		padding: 14.5px 20px
+		background-color: $color-info
+		font-size: 32px
+		color: #fff
+		opacity: 1
+.modal-content
+	border: 0
+	border-radius: 0
+.modal-backdrop.show
+	opacity: 0.8
+
+.navbar-brand
+	font-size: 36px
+	font-family: "Knockout"
+	letter-spacing: 1px
+	color: inherit !important
+	padding: 0
+
+.color-white
+	color: #fff
+
+.fz-26
+	font-size: 26px
+.fz-24
+	font-size: 24px
+.fz-18
+	font-size: 18px
+.fz-14
+	font-size: 14px
+
+.fw-500
+	font-weight: 500
+
+.pt-46
+	padding-top: 46px !important
+.pb-34
+	padding-bottom: 34px !important
+
+.video-responsive
+	position: relative
+	padding-bottom: 56.25%
+	height: 0
+	overflow: hidden
+	video, iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+.title, .sub-title
+	font-family: 'SanchezNiu'
+	font-weight: bold
+.title
+	font-size: 36px
+	margin-bottom: 1rem
+	&.title-lg
+		font-size: 43px
+.sub-title
+	font-size: 22px
+	margin-bottom: 23px
+
+.content
+	background-color: #fff
+.content-text
+	padding: 20px 60px 80px
+	&.modal-body
+		padding: 6px 49px 80px 83px
+.transcript
+	margin-top: -8px
+	margin-left: -9px
+
+.scroll	
+	max-height: 317px
+	overflow-y: auto
+	&::-webkit-scrollbar
+		width: 12px
+	&::-webkit-scrollbar-track
+		background-color: $color-gray
+		border-radius: 6px
+	&::-webkit-scrollbar-thumb
+		background-color: $color-info
+		border-radius: 6px
+	&.scroll-lg
+		max-height: 500px
+		padding-right: 30px
+.yellow-block
+	background-color: $color-yellow
+	border: 1px solid #d8dde4
+	padding: 46px 40px 57px 49px
+	textarea.scroll
+		height: 256px
+		width: 100%
+		background-color: transparent
+		border: 0
+		padding: 0
+		resize: none
+		padding-right: 30px
+		&::-webkit-scrollbar-track
+			background-color: $color-scrollbar
+
+header.header
+	.navbar
+		padding-left: 60px
+		padding-right: 35px
+		.navbar-nav
+			.nav-link
+				color: inherit
+				font-weight: 500
+				&.bordered
+					border: 1px solid
+.bread
+	font-weight: 500
+	margin-bottom: 5px
+
+.banner
+	background-size: cover
+	background-position: center
+	background-clip: content-box
+	&.banner-summary
+		background-image: url("../img/summary.jpg")
+	&.banner-introduction
+		background-image: url("../img/introduction.jpg")
+	&.banner-hero
+		background-image: url("../img/hero.jpg")
+	&.banner-course
+		background-image: url("../img/course.jpg")
+	&.banner-reflections
+		background-image: url("../img/reflections.jpg")
+
+.banner-content
+	padding-top: 36px
+	padding-bottom: 12px
+.banner-h1, .banner-h2
+	font-size: 87px
+	font-family: "Knockout"
+	letter-spacing: 1px
+.banner-h1
+	font-size: 87px
+.banner-h2
+	font-size: 67px
+.mh-406
+	min-height: 406px
+.reflections
+	width: 337px
+	height: 58px
+	background-image: url("../img/reflections.svg")
+	background-size: cover
+
+hr
+	&.green
+		border-top: 2px solid $color-green
+		margin-top: 47px
+		margin-bottom: 14px
+	&.dotted
+		border-top: 0
+		height: 1px
+		background-image: url("../img/dotted.svg")
+		margin-top: 55px
+		margin-bottom: 44px
+
+.splash
+	padding: 13px 45px 0
+	display: inline-block
+	background-color: #fff
+
+@import media
