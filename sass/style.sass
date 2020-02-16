@@ -215,7 +215,7 @@ header.header
 	&.banner-reflections
 		background-image: url("../img/reflections.jpg")	
 	&.banner-sv
-		background-image: url("../img/sv.svg")
+		background-image: url("../img/sv.jpg")
 
 .banner-content
 	padding-top: 36px
@@ -314,8 +314,6 @@ hr
 .fz-42
 	font-size: 42px
 	vertical-align: top
-	@media (max-width: 768px)
-		font-size: 30px
 .fz-44
 	font-size: 44px
 	@media (max-width: 768px)
@@ -382,40 +380,42 @@ hr
 	font-size: 80px
 	@media (max-width: 768px)
 		font-size: 50px
+
 .inside2
 	font-size: 90px
 	@media (max-width: 768px)
 		font-size: 60px
+
 .inside3
 	font-size: 100px
 	@media (max-width: 768px)
 		font-size: 40px
-.inside4
-	top: 53%
-	left: 36%
+
+.inside4, .inside5, .inside6
 	font-size: 65px
-	color: #fff
+	color: #fff	
 	@media (max-width: 768px)
 		font-size: 25px
+
+.inside4
+	top: 53%
+	left: 32%
+
 .inside5
 	top: 53%
 	left: 78%
-	font-size: 65px
-	color: #fff
-	@media (max-width: 768px)
-		font-size: 25px
+
 .inside6
 	top: 24%
 	left: 61%
-	font-size: 65px
-	color: #fff
-	@media (max-width: 768px)
-		font-size: 25px
-		top: 30%
+
 .inside7
 	font-size: 130px
 	@media (max-width: 768px) 
 		font-size: 70px
+
+.inside8
+	font-size: 80px
 
 .rubric-1
 	font-size: 80px
@@ -429,10 +429,12 @@ hr
 		height: 24px
 		position: absolute
 		background-repeat: no-repeat
-		top: 32%
+		top: 50%
+		transform: translateY(-50%)
+		margin-top: -12px
 		@media (max-width: 768px)
 			width: 14px
-			top: 26%
+			margin-top: 2px
 	&:before 
 		background-image: url(../img/sv4.svg) 
 		left: -70px
@@ -446,9 +448,13 @@ hr
 
 @media (max-width: 768px) 
 	.img-1
-		width: 150px
+		width: 150px	
 	.img-2
 		width: 160px
+
+.img-3
+	width: 48.315%
+	max-width: 430px
 
 .rubric-2
 	font-size: 80px
@@ -478,55 +484,56 @@ hr
 	display: inline-block
 	@media (max-width: 768px)
 		font-size: 36px
+		letter-spacing: -1px
 	&:before, &:after 
 		content: ""
 		width: 104px
 		height: 26px
 		position: absolute
 		background-repeat: no-repeat
-		top: 44%
+		top: 50%
+		transform: translateY(-50%)
 		@media (max-width: 991px)
 			width: 30px
+		@media (max-width: 768px)
+			margin-top: 8px
+		@media (max-width: 576px)
+			width: 20px
 	&:before 
 		background-image: url(../img/sv7.svg) 
 		left: -145px
 		@media (max-width: 991px)
 			left: -40px
+		@media (max-width: 576px)
+			left: -25px
 	&:after
 		background-image: url(../img/sv8.svg) 
 		right: -145px
 		@media (max-width: 991px)
 			right: -40px
+		@media (max-width: 576px)
+			right: -25px
 
 .comment
 	position: absolute
-	display: inline
-	width: 160px
-	top: 27%
-	left: -39%
+	width: 50%
+	top: 21%
+	right: 101%
 	font-size: 31px
 	line-height: 0.8
 	text-align: right
 	@media (max-width: 768px)
 		font-size: 18px
-		top: 22%
-		left: -77%
 	@media (min-width: 991px)
 		font-size: 46px
 .comment2
-	top: 7%
+	top: -5%
 	left: 85%
 	text-align: left
-	@media (max-width: 768px)
-		top: 12%
-		left: 74%
 .comment3
-	top: 78%
+	top: 84%
 	left: 100%
 	text-align: left
-	@media (max-width: 768px)
-		top: 81%
-		left: 67%
 
 .rubric-4
 	font-size: 75px
@@ -541,11 +548,12 @@ hr
 		height: 27px
 		position: absolute
 		background-repeat: no-repeat
-		top: 20%
+		top: 50%
+		transform: translateY(-50%)
+		margin-top: -4px
 		@media (max-width: 768px)
 			width: 33px
 			height: 20px
-			top: 3%
 	&:before 
 		background-image: url(../img/sv12.svg) 
 		left: -70px
@@ -582,7 +590,7 @@ hr
 		padding-left: 0px
 		padding-right: 0px
 	>[class^="col"]
-		padding-bottom: 70px
+		padding-bottom: 50px
 		&:after 
 			content: ""
 			display: inline-block
