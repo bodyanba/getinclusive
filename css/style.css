@@ -605,6 +605,10 @@ hr.dotted {
   transform: translate(-50%, -50%);
   font-size: 82px;
   white-space: nowrap; }
+  .inside .align-top {
+    position: absolute;
+    left: 100%;
+    top: 0; }
   @media (max-width: 768px) {
     .inside {
       font-size: 50px; } }
