@@ -30,7 +30,7 @@ ul.p
 		li
 			margin-bottom: 2rem
 
-button
+button:not(:disabled)
 	cursor: pointer
 
 p, ul.list
@@ -38,12 +38,72 @@ p, ul.list
 	&.fz-18 
 		margin-bottom: 2rem
 
+.container
+	@media (min-width: 992px)	
+		max-width: 950px
+
+.main-container
+	@media (max-width: 767.98px)
+		min-height: 100vh
+
+.bottom-buttons
+	@media (min-width: 576px)
+		margin-bottom: 80px
+		margin-top: -38px !important
+	@media (min-width: 768px)
+		margin-top: -48px !important
+	@media (max-width: 575.98px)
+		margin-left: -15px
+		margin-right: -15px
+		overflow: hidden
+		background-image: none
+
+.before-buttons
+	@media (min-width: 576px)
+		padding-bottom: 38px
+	@media (min-width: 768px)
+		padding-bottom: 48px
+		
+.column
+	-webkit-column-gap: 50px
+	-moz-column-gap: 50px
+	column-gap: 50px
+@media (min-width: 768px)
+	.column-md-2
+		-webkit-column-count: 2
+		-moz-column-count: 2
+		column-count: 2
+	.column-md-3
+		-webkit-column-count: 3
+		-moz-column-count: 3
+		column-count: 3
+
 .btn
 	border-radius: 0
 	box-shadow: none !important
+	@media (min-width: 768px)
+		font-size: 18px
+		padding-top: 9.5px
+		padding-bottom: 9.5px
+	&:disabled
+		opacity: 1
+		background-color: $color-gray-2 !important
+		border-color: $color-gray-2 !important
+		color: #787878 !important
 .btn-info
 	background-color: $color-info !important
 	border-color: $color-info !important
+.btn-info-1
+	background-color: #ccf9ff !important
+	border-color: #ccf9ff !important
+	color: $color-info !important
+.btn-success
+	background-color: $color-green !important
+	border-color: $color-green !important
+.btn-big 
+	@media (min-width: 768px)
+		font-size: 22px
+		padding: 14px 51px
 
 .form-row
 	margin-left: -3px
@@ -69,6 +129,7 @@ p, ul.list
 			transform: rotate(45deg)
 			background-color: #fff
 			border: 0
+			bottom: auto
 			box-shadow: -2px -2px 3px 0 rgba(0, 0, 0, 0.08)
 .tooltip-inner
 	width: 285px
@@ -78,9 +139,70 @@ p, ul.list
 	padding: 35px
 	border-radius: 0
 	box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.15)
+	@media (max-width: 575.98px)
+		width: 200px
+		padding: 20px
 	.btn 
 		padding-top: 5px
 		padding-bottom: 5px
+.tooltip-body
+	margin: -35px
+	position: relative
+	@media (max-width: 575.98px)
+		margin: -20px
+	section
+		background-color: $body-bg
+.tooltip-title
+	font-family: "Knockout"
+	color: $color-green
+
+.dropdown-menu
+	width: 100%
+	max-width: 557px
+	padding: 9px 0 0
+	border-radius: 0
+	border: 0
+	box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.15)
+	margin: 24px 0
+	right: 0 !important
+	left: 0
+	.btn
+		font-weight: 500
+	@media (min-width: 576px)
+		width: 100vw
+		left: auto
+		right: -112px !important
+		.btn 
+			font-size: 20px
+			min-width: 165px
+			padding: 11px 20px
+.dropdown
+	@media (max-width: 575.98px)
+		position: static
+	&.show
+		&:before
+			content: ''
+			background-color: rgba(0, 0, 0, 0.1)
+			position: fixed
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			z-index: 999
+		@media (min-width: 576px)
+			&:after
+				content: ''
+				transform: translateX(-14px) rotate(45deg)
+				position: absolute
+				width: 28px
+				height: 28px
+				left: 50%
+				top: calc(100% + 10px)
+				background-color: #fff
+				box-shadow: -2px -2px 3px 0 rgba(0, 0, 0, 0.08)
+				z-index: 1001
+.dropdown-menu-my
+	width: 240px
 
 .modal-header 
 	border-bottom: 0
@@ -90,36 +212,180 @@ p, ul.list
 		font-size: 32px
 		color: #fff
 		opacity: 1
+		@media (max-width: 575.98px)
+			font-size: 20px
 .modal-content
 	border: 0
 	border-radius: 0
 .modal-backdrop.show
 	opacity: 0.8
 
-.navbar-brand
+@media (min-width: 576px)
+	.modal-sm
+		max-width: 458px
+	.modal-md
+		max-width: 540px
+@media (min-width: 992px)
+	.modal-lg
+		max-width: 806px
+
+.modal-body-2
+	padding: 39px 42px 9px 53px
+	@media (max-width: 575.98px)
+		padding-left: 30px
+		padding-right: 30px
+
+.modal-fa
+	.modal-content
+		margin-top: 34px
+	.fas
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translate(-50%, -50%)
+		padding: 5px
+		background-color: #fff
+		border-radius: 50%
+		&:before
+			display: block
+			width: 58px
+			height: 58px
+			font-size: 27px
+			padding: 14px 16px
+			border: 1px solid $color-gray-2
+			border-radius: 50%
+
+.knockout-27
+	font-family: 'Knockout-27'
+.knockout-47
+	font-family: 'Knockout-47'
+.knockout-48
+	font-family: 'Knockout-48'
+.knockout-67
+	font-family: 'Knockout-67'
+.knockout-68
+	font-family: 'Knockout-68'
+
+.fz-168
+	font-size: 130px
+	line-height: 0.6
+	@media (max-width: 767.98px)
+		font-size: 62px
+	@media (min-width: 992px)
+		font-size: 168px
+.fz-144
+	font-size: 144px
+	line-height: 1.2
+	@media (max-width: 767.98px)
+		font-size: 48px
+.fz-128
+	font-size: 102px
+	@media (max-width: 767.98px)
+		font-size: 38px
+	@media (min-width: 992px)
+		font-size: 128px
+.fz-80
+	font-size: 80px
+	line-height: 0.3
+	@media (max-width: 767.98px)
+		font-size: 30px
+.fz-60
+	font-size: 60px
+	@media (max-width: 767.98px)
+		font-size: 40px
+.fz-58
+	font-size: 58px
+	@media (max-width: 767.98px)
+		font-size: 38px
+.fz-55
+	font-size: 55px
+	line-height: 0.9
+	@media (max-width: 767.98px)
+		font-size: 35px
+.fz-47
+	font-size: 47px
+	@media (max-width: 767.98px)
+		font-size: 34px
+.fz-44
+	font-size: 44px
+	@media (max-width: 767.98px)
+		font-size: 32px
+.fz-42
+	font-size: 42px
+	@media (max-width: 575.98px)
+		font-size: 28px
+.fz-40
+	font-size: 40px
+.fz-38
+	font-size: 38px
+	line-height: .9
+	@media (max-width: 767.98px)
+		font-size: 21px
+.fz-36
 	font-size: 36px
-	font-family: "Knockout"
-	letter-spacing: 1px
-	color: inherit !important
-	padding: 0
-
-.color-white
-	color: #fff
-
+	line-height: 1
+.fz-34 
+	font-size: 34px
+	@media (max-width: 767.98px)
+		font-size: 26px
+.fz-28
+	font-size: 28px
+	@media (max-width: 575.98px)
+		font-size: 22px
 .fz-26
 	font-size: 26px
+	@media (max-width: 575.98px)
+		font-size: 20px
 .fz-24
 	font-size: 24px
+	@media (max-width: 575.98px)
+		font-size: 20px
+.fz-20
+	font-size: 20px
 .fz-18
 	font-size: 18px
+	@media (max-width: 575.98px)
+		font-size: 1rem
 .fz-14
 	font-size: 14px
+.fz-12
+	font-size: 12px
+.fz-10
+	font-size: 10px
+.fz-0
+	font-size: 0
 
 .fw-500
 	font-weight: 500
 
+.lh-13
+	line-height: 1.3
+.lh-17
+	line-height: 1.7
+
+.color-white
+	color: #fff
+.text-green 
+	color: $color-green
+
+.bg-success
+	background-color: $color-green !important
+
+.pt-73
+	padding-top: 73px !important
+.pt-72
+	padding-top: 72px
 .pt-46
 	padding-top: 46px !important
+	@media (max-width: 991.98px)
+		padding-top: 35px !important
+	@media (max-width: 575.98px)
+		padding-top: 25px !important
+.pb-194
+	padding-bottom: 194px
+	@media (max-width: 575.98px)
+		padding-left: 15px !important
+		padding-right: 15px !important
 .pb-34
 	padding-bottom: 34px !important
 
@@ -141,6 +407,8 @@ p, ul.list
 .title
 	font-size: 36px
 	margin-bottom: 1rem
+	@media (max-width: 575.98px)
+		font-size: 30px !important
 	&.title-lg
 		font-size: 43px
 .sub-title
@@ -153,6 +421,14 @@ p, ul.list
 	padding: 20px 60px 80px
 	&.modal-body
 		padding: 6px 49px 80px 83px
+	@media (max-width: 991.98px)
+		padding: 15px 40px 60px
+		&.modal-body
+			padding: 5px 40px 50px
+	@media (max-width: 575.98px)
+		padding: 15px 30px 50px
+		&.modal-body
+			padding: 5px 30px 40px
 .transcript
 	margin-top: -8px
 	margin-left: -9px
@@ -171,10 +447,17 @@ p, ul.list
 	&.scroll-lg
 		max-height: 500px
 		padding-right: 30px
+		@media (max-width: 991.98px)
+			max-height: 100%
+			padding-right: 0
 .yellow-block
 	background-color: $color-yellow
 	border: 1px solid #d8dde4
 	padding: 46px 40px 57px 49px
+	@media (max-width: 991.98px)
+		padding: 40px 40px 50px
+	@media (max-width: 575.98px)
+		padding: 30px 15px
 	textarea.scroll
 		height: 256px
 		width: 100%
@@ -186,24 +469,61 @@ p, ul.list
 		&::-webkit-scrollbar-track
 			background-color: $color-scrollbar
 
+
+.navbar-brand
+	font-size: 36px
+	font-family: "Knockout"
+	letter-spacing: 1px
+	color: inherit !important
+	padding: 0
+	@media (max-width: 575.98px)
+		font-size: 20px
+		margin-right: 0
+.navbar-brand-2
+	font-size: 23px
+	font-family: "SanchezNiu"
+	@media (max-width: 575.98px)
+		font-size: 20px
 header.header
 	.navbar
 		padding-left: 60px
 		padding-right: 35px
+		@media (min-width: 992px)
+			padding-bottom: 2px
+		@media (max-width: 991.98px)
+			flex-wrap: wrap
+			padding-left: 40px
+			padding-right: 15px
+		@media (max-width: 575.98px)
+			padding-left: 30px
+			padding-right: 20px
 		.navbar-nav
 			.nav-link
 				color: inherit
 				font-weight: 500
+				@media (min-width: 576px)
+					font-size: 18px
+					padding: 5px 20px
 				&.bordered
 					border: 1px solid
+			@media (min-width: 576px)
+				.nav-item
+					&:first-child:not(:last-child), &.active
+						margin-right: 25px
+			@media (max-width: 575.98px)
+				.nav-item
+					margin-left: 6px
+				.nav-link
+					padding: 2px 6px
 .bread
 	font-weight: 500
 	margin-bottom: 5px
+	@media (max-width: 991.98px)
+		flex: 0 0 100%
 
 .banner
 	background-size: cover
 	background-position: center
-	background-clip: content-box
 	&.banner-summary
 		background-image: url("../img/summary.jpg")
 	&.banner-introduction
@@ -214,78 +534,367 @@ header.header
 		background-image: url("../img/course.jpg")
 	&.banner-reflections
 		background-image: url("../img/reflections.jpg")	
+	&.banner-reflections-2
+		background-image: url("../img/reflections-2.jpg")
+	&.banner-builder
+		background-image: url("../img/builder.jpg")
+	&.banner-progress
+		background-image: url("../img/progress.jpg")
 	&.banner-sv
 		background-image: url("../img/sv.jpg")
 
 .banner-content
 	padding-top: 36px
 	padding-bottom: 12px
-.banner-h1, .banner-h2
-	font-size: 87px
+.banner-h1, .banner-h2, .banner-h3
 	font-family: "Knockout"
 	letter-spacing: 1px
+	@media (max-width: 767.98px)
+		font-size: 50px !important
+	@media (max-width: 575.98px)
+		font-size: 30px !important
 .banner-h1
 	font-size: 87px
 .banner-h2
 	font-size: 67px
+.banner-h3
+	font-size: 58px
+	@media (max-width: 767.98px)
+		font-size: 40px !important
+	@media (max-width: 575.98px)
+		font-size: 30px !important
 .mh-406
 	min-height: 406px
+	@media (max-width: 767.98px)
+		min-height: 250px
+.mh-247
+	min-height: 247px
 .reflections
 	width: 337px
 	height: 58px
 	background-image: url("../img/reflections.svg")
 	background-size: cover
+	@media (max-width: 767.98px)
+		width: 320px
+		height: 55px
+	@media (max-width: 575.98px)
+		width: 240px
+		height: 41px
 
 hr
 	&.green
 		border-top: 2px solid $color-green
 		margin-top: 47px
 		margin-bottom: 14px
+		@media (max-width: 767.98px)
+			margin-top: 14px
 	&.dotted
 		border-top: 0
 		height: 1px
 		background-image: url("../img/dotted.svg")
 		margin-top: 55px
 		margin-bottom: 44px
+		@media (max-width: 767.98px)
+			margin-top: 34px
+			margin-bottom: 25px
+	&.white 
+		border-top-color: #fff
+	&.gray 
+		border-top-color: #ECE6DB
 
 .splash
 	padding: 13px 45px 0
 	display: inline-block
 	background-color: #fff
 
-@import media
+.iframe-wrap
+	height: 600px
 
+.progress-block
+	display: inline-block
+	width: 100%
+	max-width: 269px
+	color: #d4d4d4
+	font-family: "Knockout-47"
+	letter-spacing: 1px
+	padding: 3px
+	margin: 2px
+	border: 3px dotted transparent
+	.progress-header
+		padding: 11px 3px 5px
+		background-color: $body-bg
+		font-size: 30px
+		border-bottom: 2px solid transparent
+	.progress-body
+		min-height: 184px
+		border-left: 2px solid $body-bg
+		border-right: 2px solid $body-bg
+		.fill
+			fill: #BFBFBF
+	.progress-footer
+		text-align: left
+		font-size: 28px
+		padding: 0 10px 8px
+		border-left: 2px solid $body-bg
+		border-right: 2px solid $body-bg
+		border-bottom: 2px solid $body-bg
+		.check
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+			width: 34px
+			height: 34px
+			border: 1px solid $body-bg
+			border-radius: 50%
+			position: relative
+			+ span
+				vertical-align: middle
+				display: inline-block
+				margin-bottom: -5px
+	&.done
+		color: #fff
+		.progress-header
+			background-color: $color-green
+		.progress-body
+			border-color: $color-green
+			.fill
+				fill: #00B274
+		.progress-footer
+			color: $color-green
+			border-color: $color-green
+			.check
+				border-color: $color-green
+				background-color: $color-green
+				&:before, &:after
+					content: ''
+					position: absolute
+					background-color: #fff
+					height: 4px
+				&:before
+					top: 16px
+					width: 12px
+					left: 6px
+					transform: rotate(45deg)
+				&:after
+					top: 14px
+					left: 12px
+					width: 15px
+					transform: rotate(-45deg)
+	&.active
+		color: #fff
+		border-color: $color-green
+		.progress-header
+			background-color: $color-green
+			border-bottom-color: #fff
+		.progress-body
+			background-color: $color-green
+			border-color: $color-green
+			.fill
+				fill: #fff
+		.progress-footer
+			background-color: $color-green
+			border-color: $color-green
+			.check
+				border-color: #fff
+				background-color: #fff
 
-// 13.02
+.navbar-nav
+	align-items: center
 
-.knockout-27
-	font-family: 'Knockout-27'
-.knockout-47
-	font-family: 'Knockout-47'
-.knockout-48
-	font-family: 'Knockout-48'
-.knockout-67
-	font-family: 'Knockout-67'
-.knockout-68
-	font-family: 'Knockout-68'
+#link-clock
+	display: flex	
+	@media (min-width: 576px)
+		margin-right: -8px
 
-.banner-h3
+.pad 
+	padding-left: 15px
+	padding-right: 15px
+	@media (min-width: 576px)
+		padding-left: 47px
+		padding-right: 47px
+	&.pad-1
+		padding-top: 15px
+		padding-bottom: 12px
+	&.pad-2
+		padding-top: 12px
+		padding-bottom: 12px
+		background-color: $body-bg-2
+	&.pad-3
+		padding-top: 15px
+		padding-bottom: 15px
+		@media (min-width: 576px)
+			padding-top: 32px
+			padding-bottom: 44px
+	.fa
+		font-size: 20px
+		font-weight: 900
+		color: $color-green
+		vertical-align: middle
+		@media (min-width: 576px)
+			margin-left: -18px
+			margin-top: 2px
+			position: absolute
+
+textarea
+	display: block
+	width: 100%
+	resize: none 
+	border-color: $color-gray-2
+	padding: 12px 15px
+	height: 134px
+
+.radio-group
+	position: relative
+	cursor: pointer
+	padding-left: 30px
+	margin-bottom: 0
+	.switch
+		position: absolute
+		left: 0
+		top: 2px
+		width: 18px
+		height: 18px
+		border: 1px solid $color-gray-2
+		border-radius: 50%
+		padding: 3px
+		background-clip: content-box
+	input
+		display: none
+		&:checked ~ .switch
+			border-color: $color-info
+			background-color: $color-info
+
+.thank
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	flex-direction: column
+	justify-content: center
+	background-color: rgba(255, 255, 255, .95)
+	text-align: center
+	padding: 15px
+	.active & 
+		display: flex
+
+// 01.13.2019 
+.navbar-2
+	padding-top: 14px
+	padding-bottom: 12px !important
+	@media (max-width: 575.98px)
+		padding-left: 15px !important
+		padding-right: 9px !important
+
+.box
+	color: $color-black
+	padding: 14px
+	background-color: #414143
+	border-bottom: 5px solid #2F3030
+	border-radius: 12px
+	@media (max-width: 767.98px)
+		padding: 5px
+		border-bottom-width: 2px
+		border-radius: 8px
+	&-body
+		padding: 43px 55px
+		background-color: #FFFAF5
+		border-bottom: 4px solid #D9D5D0
+		border-radius: 8px
+		@media (max-width: 991.98px)
+			padding-left: 40px
+			padding-right: 40px
+		@media (max-width: 767.98px)
+			padding: 25px
+			background-color: #FFFAF5
+			border-bottom-width: 2px
+			border-radius: 4px
+	&-p
+		padding: 5px 0 31px
+		font-size: 18px
+		line-height: 1.35
+		@media (min-width: 992px)
+			padding-left: 13px
+			padding-right: 13px
+		@media (max-width: 767.98px)
+			padding: 0 0 1rem
+			font-size: 1rem
+		.sub-title
+			font-size: 18px
+			margin-bottom: 7px
+			@media (max-width: 767.98px)
+				font-size: 1rem
+	textarea 
+		font-family: 'TegamiOne'
+		display: block
+		width: 100%
+		min-height: 322px
+		border-color: #ECE6DB
+		border-left: 0
+		border-right: 0
+		background-color: transparent !important
+		padding: 37px 13px
+		font-size: 26px
+		line-height: 1.19
+		color: inherit
+		margin-bottom: 11px
+		border-radius: 0
+		box-shadow: none !important
+		@media (max-width: 991.98px)
+			padding: 20px 0
+		@media (max-width: 767.98px)
+			padding: 1rem 0
+			font-size: 22px
+	.dropdown-menu
+		color: $color-black
+		padding: 25px
+		border: 0
+		border-radius: 0
+		box-shadow: 0px 0px 5px 0 rgba(0, 0, 0, 0.15)
+
+.sub-title-2
+	font-size: 18px
+	margin-bottom: 6px
+
+.img-next 
+	font-size: 34px
+	font-weight: bold
+	line-height: 1
+	@media (max-width: 374.98px)
+		font-size: 26px
+		img 	
+			width: 26px
+	span
+		vertical-align: middle
+
+.progress-2
+	height: 5px
+	border-radius: 0
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	background-color: #D0E3DC
+
+// 02.13.2019
+.banner-h4
 	font-family: 'Knockout-47'
 	font-size: 150px
 	letter-spacing: -1.3px
 	line-height: 0.51
 	padding-top: 141px
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 60px
 		padding-top: 50px
-	@media (min-width: 991.98px)
+	@media (min-width: 992px)
 		font-size: 208px
 
-.banner-h4
+.banner-h5
 	font-size: 74px
 	overflow: hidden
 	width: 100%
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 28px
 	&:before, &:after 
 		content: ""
@@ -295,7 +904,7 @@ hr
 		height: 4px
 		background-color: #fff
 		position: relative
-		@media (max-width: 768px)
+		@media (max-width: 767.98px)
 			height: 1px
 	&:before 
 		margin-left: -100%
@@ -303,70 +912,6 @@ hr
 	&:after
 		margin-right: -100%
 		right: -26px
-
-.fz-0
-	font-size: 0
-.fz-34 
-	font-size: 34px
-	@media (max-width: 768px)
-		font-size: 26px
-.fz-38
-	font-size: 38px
-	line-height: .9
-	@media (max-width: 768px)
-		font-size: 21px
-.fz-38
-	font-size: 38px
-	@media (max-width: 576px)
-		font-size: 20px
-.fz-40
-	font-size: 40px
-.fz-42
-	font-size: 42px
-.fz-44
-	font-size: 44px
-	@media (max-width: 768px)
-		font-size: 32px
-.fz-47
-	font-size: 47px
-	@media (max-width: 768px)
-		font-size: 34px
-.fz-58
-	font-size: 58px
-	@media (max-width: 768px)
-		font-size: 38px
-.fz-55
-	font-size: 55px
-	line-height: 0.9
-	@media (max-width: 768px)
-		font-size: 35px
-.fz-60
-	font-size: 60px
-	@media (max-width: 768px)
-		font-size: 40px
-.fz-80
-	font-size: 80px
-	line-height: 0.3
-	@media (max-width: 768px)
-		font-size: 30px
-.fz-128
-	font-size: 102px
-	@media (max-width: 768px)
-		font-size: 38px
-	@media (min-width: 991.98px)
-		font-size: 128px
-.fz-144
-	font-size: 144px
-	line-height: 1.2
-	@media (max-width: 768px)
-		font-size: 48px
-.fz-168
-	font-size: 130px
-	line-height: 0.6
-	@media (max-width: 768px)
-		font-size: 62px
-	@media (min-width: 991.98px)
-		font-size: 168px
 
 .content-gray 
 	background-color: #FAFAF9
@@ -378,10 +923,10 @@ hr
 	text-align: center
 	letter-spacing: -.6px
 	margin-top: -1px
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 28px
 		padding-top: 2px	
-	@media (min-width: 991.98px)
+	@media (min-width: 992px)
 		font-size: 80px
 
 .inside
@@ -395,23 +940,23 @@ hr
 		position: absolute
 		left: 100%
 		top: 0
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 50px
 
 .inside2
 	font-size: 92px
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 60px
 
 .inside3
 	font-size: 102px
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 40px
 
 .inside4, .inside5, .inside6
 	font-size: 65px
 	color: #fff	
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 25px
 
 .inside4
@@ -428,7 +973,7 @@ hr
 
 .inside7
 	font-size: 116px
-	@media (max-width: 768px) 
+	@media (max-width: 767.98px) 
 		font-size: 70px
 
 .inside8
@@ -438,7 +983,7 @@ hr
 	font-size: 80px
 	position: relative
 	display: inline-block
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 24px
 	&:before, &:after 
 		content: ""
@@ -449,34 +994,24 @@ hr
 		top: 50%
 		transform: translateY(-50%)
 		margin-top: -12px
-		@media (max-width: 768px)
+		@media (max-width: 767.98px)
 			width: 14px
 			margin-top: 2px
 	&:before 
 		background-image: url(../img/sv4.svg) 
 		left: -70px
-		@media (max-width: 768px) 
+		@media (max-width: 767.98px) 
 			left: -24px
 	&:after
 		background-image: url(../img/sv5.svg) 
 		right: -70px
-		@media (max-width: 768px)
+		@media (max-width: 767.98px)
 			right: -24px
-
-@media (max-width: 768px) 
-	.img-1
-		width: 150px	
-	.img-2
-		width: 160px
-
-.img-3
-	width: 48.315%
-	max-width: 430px
 
 .rubric-2
 	font-size: 80px
 	overflow: hidden
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 30px
 	&:before, &:after
 		content: ""
@@ -486,7 +1021,7 @@ hr
 		height: 3px
 		background-color: $color-black
 		position: relative
-		@media (max-width: 768px)
+		@media (max-width: 767.98px)
 			height: 2px
 	&:before 
 		margin-left: -100%
@@ -499,7 +1034,7 @@ hr
 	font-size: 84px
 	position: relative
 	display: inline-block
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 36px
 		letter-spacing: -1px
 	&:before, &:after 
@@ -510,52 +1045,31 @@ hr
 		background-repeat: no-repeat
 		top: 50%
 		margin-top: -1.5px
-		@media (max-width: 991px)
+		@media (max-width: 991.98px)
 			width: 30px
-		@media (max-width: 576px)
+		@media (max-width: 575.98px)
 			width: 20px
 	&:before 
 		background-image: url(../img/sv7.svg) 
 		left: -145px
-		@media (max-width: 991px)
+		@media (max-width: 991.98px)
 			left: -40px
-		@media (max-width: 576px)
+		@media (max-width: 575.98px)
 			left: -25px
 	&:after
 		background-image: url(../img/sv8.svg) 
 		right: -145px
-		@media (max-width: 991px)
+		@media (max-width: 991.98px)
 			right: -40px
-		@media (max-width: 576px)
+		@media (max-width: 575.98px)
 			right: -25px
-
-.comment
-	position: absolute
-	width: 50%
-	top: 21%
-	right: 101%
-	font-size: 31px
-	line-height: 0.8
-	text-align: right
-	@media (max-width: 768px)
-		font-size: 18px
-	@media (min-width: 991px)
-		font-size: 44px
-.comment2
-	top: -4%
-	left: 85%
-	text-align: left
-.comment3
-	top: 84%
-	left: 100%
-	text-align: left
 
 .rubric-4
 	font-size: 73px
 	position: relative
 	display: inline-block
 	line-height: 0.9
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		font-size: 31px
 	&:before, &:after 
 		content: ""
@@ -565,19 +1079,52 @@ hr
 		background-repeat: no-repeat
 		top: 50%
 		transform: translateY(-50%)
-		@media (max-width: 768px)
+		@media (max-width: 767.98px)
 			width: 33px
 			height: 18px
 	&:before 
 		background-image: url(../img/sv12.svg) 
 		left: -70px
-		@media (max-width: 768px)
+		@media (max-width: 767.98px)
 			left: -44px
 	&:after
 		background-image: url(../img/sv13.svg) 
 		right: -70px
-		@media (max-width: 768px)
+		@media (max-width: 767.98px)
 			right: -44px
+
+@media (max-width: 767.98px) 
+	.img-1
+		width: 150px	
+	.img-2
+		width: 160px
+
+.img-3
+	width: 48.315%
+	max-width: 430px
+
+.comment
+	position: absolute
+	width: 50%
+	top: 21%
+	right: 101%
+	font-size: 31px
+	line-height: 0.8
+	text-align: right
+	@media (max-width: 767.98px)
+		font-size: 18px
+	@media (min-width: 992px)
+		font-size: 44px
+
+.comment2
+	top: -4%
+	left: 85%
+	text-align: left
+
+.comment3
+	top: 84%
+	left: 100%
+	text-align: left
 
 .circle
 	width: 52px
@@ -591,7 +1138,7 @@ hr
 	font-size: 28px
 	font-family: "ProximaNova"
 	font-weight: bold
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		width: 32px
 		height: 32px
 		line-height: 32px
@@ -600,11 +1147,11 @@ hr
 .row-2
 	padding-left: 88px
 	padding-right: 88px
-	@media (max-width: 768px)
+	@media (max-width: 767.98px)
 		padding-left: 0px
 		padding-right: 0px
-	>[class^="col"]
-		padding-bottom: 50px
+	> [class^="col"]
+		margin-bottom: 50px
 		&:after 
 			content: ""
 			display: inline-block
@@ -615,14 +1162,17 @@ hr
 			right: 0
 			top: 50%
 			transform: translateY(-50%)
-			@media (max-width: 768px)
+			@media (max-width: 767.98px)
 				height: 40px
 		&:nth-child(3n+3)
 			&:after
 				display: none
-				@media (max-width: 991px)
+				@media (max-width: 991.98px)
 					display: block
-		@media (max-width: 991px)
+		@media (max-width: 991.98px)
 			&:nth-child(even)
 				&:after
 					display: none
+
+
+
