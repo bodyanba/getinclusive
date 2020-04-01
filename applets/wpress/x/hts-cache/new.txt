@@ -1,3 +1,0 @@
-date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
-03:45:13	141/141	---MCZ	404	error ('Not%20Found')	text/html	date:Thu,%2008%20Mar%202018%2003:45:13%20GMT	http://wpress.getinclusive.com/robots.txt		(from )
-03:45:14	25073/25073	---MCZ	200	added ('OK')	text/html	date:Thu,%2008%20Mar%202018%2003:45:13%20GMT	http://wpress.getinclusive.com/	x/wpress.getinclusive.com/index.html	(from )

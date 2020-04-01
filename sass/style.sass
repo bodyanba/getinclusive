@@ -1,4 +1,5 @@
-@import fonts, colors
+@import 'https://getinclusive-fonts.s3.amazonaws.com/assets/getinclusive_fonts.css'
+@import colors
 
 *
 	outline: none !important
@@ -7,7 +8,7 @@ html
 	height: 100%
 
 body
-	font-family: "ProximaNova", sans-serif
+	font-family: 'ProximaNova', sans-serif
 	color: $color-black
 	background-color: $body-bg
 
@@ -153,7 +154,7 @@ p, ul.list
 	section
 		background-color: $body-bg
 .tooltip-title
-	font-family: "Knockout", sans-serif
+	font-family: 'Knockout', sans-serif
 	color: $color-green
 
 .dropdown-menu
@@ -256,15 +257,15 @@ p, ul.list
 			border-radius: 50%
 
 .knockout-27
-	font-family: 'Knockout-27', sans-serif
+	font-family: 'Knockout27', sans-serif
 .knockout-47
-	font-family: 'Knockout-47', sans-serif
+	font-family: 'Knockout47', sans-serif
 .knockout-48
-	font-family: 'Knockout-48', sans-serif
+	font-family: 'Knockout48', sans-serif
 .knockout-67
-	font-family: 'Knockout-67', sans-serif
+	font-family: 'Knockout67', sans-serif
 .knockout-68
-	font-family: 'Knockout-68', sans-serif
+	font-family: 'Knockout68', sans-serif
 
 .fz-168
 	font-size: 130px
@@ -472,7 +473,7 @@ p, ul.list
 
 .navbar-brand
 	font-size: 36px
-	font-family: "Knockout", sans-serif
+	font-family: 'Knockout', sans-serif
 	letter-spacing: 1px
 	color: inherit !important
 	padding: 0
@@ -481,7 +482,7 @@ p, ul.list
 		margin-right: 0
 .navbar-brand-2
 	font-size: 23px
-	font-family: "SanchezNiu", sans-serif
+	font-family: 'SanchezNiu', sans-serif
 	@media (max-width: 575.98px)
 		font-size: 20px
 header.header
@@ -547,7 +548,7 @@ header.header
 	padding-top: 36px
 	padding-bottom: 12px
 .banner-h1, .banner-h2, .banner-h3
-	font-family: "Knockout", sans-serif
+	font-family: 'Knockout', sans-serif
 	letter-spacing: 1px
 	@media (max-width: 767.98px)
 		font-size: 50px !important
@@ -615,7 +616,7 @@ hr
 	width: 100%
 	max-width: 269px
 	color: #d4d4d4
-	font-family: "Knockout-47", sans-serif
+	font-family: 'Knockout-47', sans-serif
 	letter-spacing: 1px
 	padding: 3px
 	margin: 2px
@@ -878,7 +879,7 @@ textarea
 	background-color: #D0E3DC
 
 .banner-h4
-	font-family: 'Knockout-47', sans-serif
+	font-family: 'Knockout47', sans-serif
 	font-size: 150px
 	letter-spacing: -1.3px
 	line-height: 0.51
@@ -1135,7 +1136,7 @@ textarea
 	color: #fff
 	vertical-align: middle
 	font-size: 28px
-	font-family: "ProximaNova", sans-serif
+	font-family: 'ProximaNova', sans-serif
 	font-weight: bold
 	@media (max-width: 767.98px)
 		width: 32px
@@ -1186,7 +1187,7 @@ textarea
 	display: flex
 	flex-direction: column
 	justify-content: flex-end
-	font-family: 'Knockout-48', sans-serif
+	font-family: 'Knockout48', sans-serif
 	font-size: 38px
 	line-height: 1.1
 	text-transform: uppercase
@@ -1203,7 +1204,7 @@ textarea
 	position: relative
 	.video-overflow
 		text-align: center
-		@media (min-width: 768px)
+		@media (min-width: 992px)
 			position: absolute
 			top: 0
 			right: 0
@@ -1216,9 +1217,6 @@ textarea
 			flex-direction: column
 			justify-content: flex-end
 		@media (max-width: 991.98px)
-			padding-left: 1rem
-			padding-right: 1rem
-		@media (max-width: 767.98px)
 			padding: 50px 10% 0
 			font-size: 20px
 			font-weight: 500
@@ -1230,63 +1228,65 @@ textarea
 	> [class^="col"]
 		padding-left: 8px
 		padding-right: 8px
-		&:before, &:after 
-			content: ''
-			border-top: 2px solid 
+
+.decision-block
+	&:before, &:after 
+		content: ''
+		border-top: 2px solid 
+		position: absolute
+		top: 0
+		width: calc(50% - 8px - 16px)
+		@media (max-width: 991.98px)
+			border-top-width: 3px
+			width: calc(50% - 8px - 20px)
+			border-color: $color-green
+	&:before
+		left: 8px
+	&:after 
+		right: 8px
+	&.disabled
+		opacity: .2
+		pointer-events: none
+	a 
+		display: block
+		height: 100%
+		padding: 22px 9% 63px
+		color: inherit
+		text-align: left
+		text-decoration: none !important
+		position: relative
+		@media (max-width: 991.98px)
+			padding: 31px 6% 66px
+		&:before 
+			counter-increment: number
+			content: counter(number)
 			position: absolute
-			top: 0
-			width: calc(50% - 8px - 16px)
-			@media (max-width: 767.98px)
-				border-top-width: 3px
-				width: calc(50% - 8px - 20px)
+			top: 1px
+			left: 50%
+			transform: translate(-50%, -50%)
+			border: 2px solid 
+			border-radius: 100px
+			width: 32px
+			height: 32px
+			line-height: 30px
+			padding-bottom: 15px
+			text-align: center
+			background-clip: content-box
+			@media (max-width: 991.98px)
+				top: 1.5px
+				border-width: 3px
+				width: 40px
+				height: 40px
+				line-height: 37px
+				font-size: 22px
+				font-weight: 900
 				border-color: $color-green
-		&:before
-			left: 8px
-		&:after 
-			right: 8px
-		&.disabled
-			opacity: .2
-			pointer-events: none
-		a 
-			display: block
-			height: 100%
-			padding: 22px 9% 63px
-			color: inherit
-			text-align: left
-			text-decoration: none !important
-			position: relative
-			@media (max-width: 767.98px)
-				padding: 31px 6% 66px
+		&:hover 
+			background-color: rgba(255, 255, 255, .1)
 			&:before 
-				counter-increment: number
-				content: counter(number)
-				position: absolute
-				top: 1px
-				left: 50%
-				transform: translate(-50%, -50%)
-				border: 2px solid 
-				border-radius: 100px
-				width: 32px
-				height: 32px
-				line-height: 30px
-				padding-bottom: 15px
-				text-align: center
-				background-clip: content-box
-				@media (max-width: 767.98px)
-					top: 1.5px
-					border-width: 3px
-					width: 40px
-					height: 40px
-					line-height: 37px
-					font-size: 22px
-					font-weight: 900
-					border-color: $color-green
-			&:hover 
 				background-color: rgba(255, 255, 255, .1)
-				&:before 
-					background-color: rgba(255, 255, 255, .1)
-		
-.subtitle
+	
+.preamble
 	position: relative
 	padding-bottom: 1rem
 	margin-bottom: 14px
@@ -1299,19 +1299,19 @@ textarea
 		right: 0
 		bottom: 0
 		margin: 0 auto
-	@media (max-width: 767.98px)
+	@media (max-width: 991.98px)
 		padding-bottom: 31px
 		margin-bottom: 30px
 		&:after
 			border-top-width: 3px
 			width: 135px
 
-.h-q
-	font-family: 'Knockout-48', sans-serif
+.h1
+	font-family: 'Knockout48', sans-serif
 	font-size: 44px
 	margin-bottom: 22px
 	text-transform: uppercase
-	@media (max-width: 767.98px)
+	@media (max-width: 991.98px)
 		font-size: 65px
 		margin-bottom: 77px
 		line-height: .95
