@@ -1470,4 +1470,75 @@ textarea {
       margin-bottom: 77px;
       line-height: 0.95; } }
 
+.bg-template-1 {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/bg-template.jpg");
+  padding: 104px 92px 0;
+  color: #fff; }
+  @media (max-width: 991.98px) {
+    .bg-template-1 {
+      padding: 104px 40px 0; } }
+  @media (max-width: 767.98px) {
+    .bg-template-1 {
+      padding: 66px 28px 0;
+      background-position: 20% center; } }
+
+.bg-template-3 {
+  padding: 76px 92px 0; }
+  @media (max-width: 767.98px) {
+    .bg-template-3 {
+      padding: 66px 28px 0; } }
+
+@media (max-width: 767.98px) {
+  .bg-template-4 {
+    padding: 12px 28px 0; } }
+
+.template-name-1 {
+  font-size: 117px;
+  font-family: "Knockout", sans-serif;
+  line-height: 0.8;
+  padding-right: 60px;
+  text-transform: uppercase; }
+  @media (max-width: 767.98px) {
+    .template-name-1 {
+      padding-right: 0; } }
+
+.template-name-3 {
+  font-size: 105px;
+  padding-right: 0px; }
+
+.template-name-3a {
+  font-family: "SanchezNiu", sans-serif;
+  font-size: 30px; }
+
+.template-name-4 {
+  font-size: 80px; }
+
+.btn-template-1 {
+  color: inherit;
+  font-weight: 500;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  padding: 7.5px 38px;
+  transition: 0.3s;
+  margin: 20px 0 158px; }
+  .btn-template-1:hover {
+    color: #fff;
+    opacity: 0.6; }
+
+.btn-template-3 {
+  padding: 7.5px 27px;
+  margin: 20px 0 58px; }
+  @media (max-width: 575.98px) {
+    .btn-template-3 {
+      margin: 0px 0 66px; } }
+
+.btn-template-4 {
+  padding: 7.5px 27px;
+  margin: 20px 0 108px; }
+  @media (max-width: 575.98px) {
+    .btn-template-4 {
+      margin: 20px 0 176px; } }
+
 /*# sourceMappingURL=style.css.map */
