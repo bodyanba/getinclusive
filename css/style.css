@@ -1548,10 +1548,6 @@ textarea {
   padding: 7.5px 40px;
   margin-top: 26px; }
 
-.container-1 {
-  padding-left: 0;
-  padding-right: 0; }
-
 .border-circle {
   border-radius: 20px 20px 0 0;
   margin-top: -24px; }
@@ -1566,13 +1562,13 @@ textarea {
   letter-spacing: 0.7px;
   line-height: 0.51;
   padding-top: 65px; }
+  @media (min-width: 992px) {
+    .banner-h6 {
+      font-size: 80px; } }
   @media (max-width: 767.98px) {
     .banner-h6 {
       font-size: 27px;
       padding-top: 30px; } }
-  @media (min-width: 992px) {
-    .banner-h6 {
-      font-size: 80px; } }
 
 .banner-h7 {
   font-family: "Knockout48", sans-serif;
@@ -1581,14 +1577,14 @@ textarea {
   letter-spacing: 0.7px;
   line-height: 0.51;
   padding-top: 35px; }
-  @media (max-width: 767.98px) {
-    .banner-h7 {
-      font-size: 73px;
-      padding-top: 22px; } }
   @media (min-width: 992px) {
     .banner-h7 {
       font-size: 200px;
       padding-top: 52px; } }
+  @media (max-width: 767.98px) {
+    .banner-h7 {
+      font-size: 73px;
+      padding-top: 22px; } }
 
 .banner-h8 {
   font-family: "Knockout48", sans-serif;
@@ -1598,15 +1594,15 @@ textarea {
   line-height: 0.51;
   padding-top: 42px;
   padding-bottom: 108px; }
+  @media (min-width: 992px) {
+    .banner-h8 {
+      font-size: 156px;
+      padding-top: 62px; } }
   @media (max-width: 767.98px) {
     .banner-h8 {
       font-size: 56px;
       padding-top: 22px;
       padding-bottom: 68px; } }
-  @media (min-width: 992px) {
-    .banner-h8 {
-      font-size: 156px;
-      padding-top: 62px; } }
 
 .content-green-2 {
   font-size: 15px;
