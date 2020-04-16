@@ -1348,9 +1348,6 @@ textarea
 		margin-bottom: 77px
 		line-height: .95
 
-// 04.04
-
-
 .btn-outline-white
 	color: #fff !important
 	font-weight: 500
@@ -1381,32 +1378,41 @@ textarea
 		font-size: 26px 
 		font-family: 'SanchezNiu', sans-serif
 
-.bg-template-3
-	text-align: left !important
-	@media (min-width: 992px)
-		padding: 58px 92px !important
+.video-responsive-2
 	@media (max-width: 991.98px)
-		padding-bottom: 50px !important
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		
+.bg-template-3
+	color: #fff
+	background-size: cover
+	background-position: center center
+	padding-top: 70px
+	padding-bottom: 50px
+	position: relative
+	z-index: 2
+	display: none
+	.finished &
+		display: block
+	@media (min-width: 992px)
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
 	h1
 		font-size: 105px
-		font-family: 'Knockout-48', sans-serif
-		line-height: .8
-		text-transform: uppercase
 		margin-bottom: 2px
 	h2 
 		font-size: 30px
-		font-family: 'SanchezNiu', sans-serif
 		line-height: 1.5
 		letter-spacing: 1px
 		margin-bottom: 0
 	.btn-outline-white
 		padding-left: 27px
 		padding-right: 27px
-		@media (max-width: 991.98px)
-			color: inherit !important
-			border-color: inherit
-
-// 05.04
 
 .border-circle
 	border-radius: 20px 20px 0 0

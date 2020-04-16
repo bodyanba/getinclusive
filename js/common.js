@@ -58,4 +58,13 @@ $(document).ready(function () {
 		btnSubmit();
 	});
 
+		var iframe = $('#iframe');
+    var player = new Vimeo.Player(iframe);
+
+    player.on('ended', function() {
+    	setTimeout(function() {
+        $('body').addClass('finished')
+	    }, 1000);
+    });
+
 });
