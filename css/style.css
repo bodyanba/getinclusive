@@ -671,8 +671,8 @@ header.header .navbar {
   .banner.banner-sv {
     background-image: url("../img/sv.jpg"); }
   .banner.banner-infographic {
-    background-image: url("../img/infographic.svg");
-    background-color: #00A66D; }
+    background-image: url("../img/infographic.png");
+    background-color: #00B174; }
     @media (min-width: 576px) {
       .banner.banner-infographic {
         border-radius: 20px 20px 0 0; } }
@@ -1534,11 +1534,11 @@ textarea {
       padding-right: 40px; } }
   @media (max-width: 767.98px) {
     .bg-template-1 {
-      padding: 66px 28px 76px;
-      background-position: 20% center; } }
+      padding: 66px 28px 76px !important;
+      background-position: 20% center !important; } }
   @media (max-width: 575.98px) {
     .bg-template-1 {
-      padding-bottom: 260px; } }
+      padding-bottom: 260px !important; } }
   .bg-template-1 h1 {
     font-size: 117px;
     font-family: "Knockout-48", sans-serif;
@@ -1785,9 +1785,9 @@ textarea {
       font-weight: bold;
       padding: 12px 22px;
       line-height: 1.3; }
-  .hover-rotate:focus .card-rotate {
+  .hover-rotate.focus .card-rotate {
     transform: rotateY(180deg); }
-    .hover-rotate:focus .card-rotate .card-rotate-back {
+    .hover-rotate.focus .card-rotate .card-rotate-back {
       opacity: 1; }
 
 .bg-gray {

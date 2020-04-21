@@ -58,6 +58,10 @@ $(document).ready(function () {
 		btnSubmit();
 	});
 
+	$(".hover-rotate").on("click", function () {
+		$(this).toggleClass('focus');
+	});
+
 		var iframe = $('#iframe');
     var player = new Vimeo.Player(iframe);
 
